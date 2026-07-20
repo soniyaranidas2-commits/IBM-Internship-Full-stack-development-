@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard (Flexbox)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-style: sans-serif;
+             
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #fcd0a1, #f5a6b9);
+            padding: 20px;
+            
+        }
+
+        /* Keyboard Chassis */
+        .keyboard {
+            
+            max-width: 1150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Title styling */
+        .keyboard-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #e09a49;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /* Flex Row Setup */
+        .row {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        /* Key Display Styling */
+        .key {
+            background: #fffdfa;
+            color: #4a4a4a;
+            padding: 15px 0;
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+            /* Sizing blueprint */
+            flex: 1 1 0px; 
+            min-width: 0;
+
+            
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        
+        .key.f-1-2 { flex-grow: 1.2; }
+        .key.f-1-5 { flex-grow: 1.5; }
+        .key.f-1-8 { flex-grow: 1.8; }
+        .key.f-2   { flex-grow: 2; }
+        .key.f-2-2 { flex-grow: 2.2; }
+        .key.f-7   { flex-grow: 7; }
+    </style>
+</head>
+<body>
+
+    <div class="keyboard">
+        <div class="keyboard-title">Keyboard</div>
+
+        <div class="row">
+            <div class="key">Esc</div>
+            <div class="key">F1</div>
+            <div class="key">F2</div>
+            <div class="key">F3</div>
+            <div class="key">F4</div>
+            <div class="key">F5</div>
+            <div class="key">F6</div>
+            <div class="key">F7</div>
+            <div class="key">F8</div>
+            <div class="key">F9</div>
+            <div class="key">F10</div>
+            <div class="key">F11</div>
+            <div class="key">F12</div>
+            <div class="key">Insect</div>
+            <div class="key f-1-2">printScr</div>
+            <div class="key">Delete</div>
+        </div>
+
+        <div class="row">
+            <div class="key">~</div>
+            <div class="key">1</div>
+            <div class="key">2</div>
+            <div class="key">3</div>
+            <div class="key">4</div>
+            <div class="key">5</div>
+            <div class="key">6</div>
+            <div class="key">7</div>
+            <div class="key">8</div>
+            <div class="key">9</div>
+            <div class="key">10</div>
+            <div class="key">-</div>
+            <div class="key">=</div>
+            <div class="key f-2">Backspace</div>
+            <div class="key">Home</div>
+        </div>
+
+        <div class="row">
+            <div class="key f-1-5">Tab</div>
+            <div class="key">Q</div>
+            <div class="key">W</div>
+            <div class="key">E</div>
+            <div class="key">R</div>
+            <div class="key">T</div>
+            <div class="key">Y</div>
+            <div class="key">U</div>
+            <div class="key">I</div>
+            <div class="key">O</div>
+            <div class="key">P</div>
+            <div class="key">{</div>
+            <div class="key">}</div>
+            <div class="key">\</div>
+            <div class="key">Pg Up</div>
+        </div>
+
+        <div class="row">
+            <div class="key f-1-8">Caps Lock</div>
+            <div class="key">A</div>
+            <div class="key">S</div>
+            <div class="key">D</div>
+            <div class="key">F</div>
+            <div class="key">G</div>
+            <div class="key">H</div>
+            <div class="key">J</div>
+            <div class="key">K</div>
+            <div class="key">L</div>
+            <div class="key">;</div>
+            <div class="key">*</div>
+            <div class="key f-1-8">Enter</div>
+            <div class="key">Pg Dn</div>
+        </div>
+
+        <div class="row">
+            <div class="key f-2-2">Shift</div>
+            <div class="key">Z</div>
+            <div class="key">X</div>
+            <div class="key">C</div>
+            <div class="key">V</div>
+            <div class="key">B</div>
+            <div class="key">N</div>
+            <div class="key">M</div>
+            <div class="key">&lt;</div>
+            <div class="key">&gt;</div>
+            <div class="key">?</div>
+            <div class="key f-2-2">Shift</div>
+            <div class="key">↑</div>
+            <div class="key">End</div>
+        </div>
+
+        <div class="row">
+            <div class="key">Ctrl</div>
+            <div class="key">Fn</div>
+            <div class="key">Win</div>
+            <div class="key">Alt</div>
+            <div class="key f-7">space</div>
+            <div class="key">Alt</div>
+            <div class="key">Fn</div>
+            <div class="key f-1-2">Ctrl</div>
+            <div class="key">←</div>
+            <div class="key">↓</div>
+            <div class="key">→</div >
+        </div>
+    </div>
+
+</body>
+</html>
